@@ -1,13 +1,13 @@
 const express=require('express')
 const path=require('path')
 const hbs=require('hbs')
-const geocode=require('./utils/geocode.js')
-const forecast=require('./utils/forecast.js')
+const geocode=require('./src/utils/geocode.js')
+const forecast=require('./src/utils/forecast.js')
 const app=express();
 
-const publicDirectory=path.join(__dirname,'../public');
-const viewsPath=path.join(__dirname,'../templates/views')
-const partialsPath=path.join(__dirname,'../templates/partials')
+const publicDirectory=path.join(__dirname,'./public');
+const viewsPath=path.join(__dirname,'./templates/views')
+const partialsPath=path.join(__dirname,'./templates/partials')
 
 app.use(express.static(publicDirectory))
 
